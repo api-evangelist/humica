@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://developer.employmenthero.com/api-references
+description: >-
+  Candidate MCP server surface derived from the documented resource groups of
+  the Employment Hero API (the platform behind humi.ca). No official hosted /
+  remote MCP server was found. Tools below are a candidate read-first mapping of
+  the documented resources — one list tool per resource group. Not published by
+  the provider; grounded only in documented resource names (no invented ops).
+server:
+  name: employment-hero
+  transport: http
+  url: null
+tools:
+  - name: list_employees
+    description: List employees in the organisation.
+    source: developer.employmenthero.com resource "Employee"
+  - name: list_organisations
+    description: List organisations accessible to the token.
+    source: developer.employmenthero.com resource "Organisation"
+  - name: list_leave_requests
+    description: List employee leave requests.
+    source: developer.employmenthero.com resource "Leave Request"
+  - name: list_leave_balances
+    description: List employee leave balances.
+    source: developer.employmenthero.com resource "Leave Balance"
+  - name: list_pay_details
+    description: List employee pay details.
+    source: developer.employmenthero.com resource "Pay Detail"
+  - name: list_payslips
+    description: List employee payslips.
+    source: developer.employmenthero.com resource "Payslip"
+  - name: list_timesheet_entries
+    description: List timesheet entries.
+    source: developer.employmenthero.com resource "Timesheet Entry"
+  - name: list_rostered_shifts
+    description: List rostered shifts.
+    source: developer.employmenthero.com resource "Rostered Shift"
+  - name: list_teams
+    description: List teams.
+    source: developer.employmenthero.com resource "Team"
+  - name: list_departments
+    description: List departments.
+    source: developer.employmenthero.com resource "Department"
+  - name: list_documents
+    description: List documents.
+    source: developer.employmenthero.com resource "Document"
+  - name: list_webhooks
+    description: List configured webhooks.
+    source: developer.employmenthero.com resource "Webhook"

@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.employmenthero.com/api-references
+docs: https://developer.employmenthero.com/api-references
+description: >-
+  OAuth 2.0 scope model for the Employment Hero API. Scopes are selected by the
+  developer at application-registration time and consented by the organisation
+  admin during the authorization-code (PKCE) flow; the public docs describe
+  scope selection and give organisation/employee read examples rather than an
+  exhaustive machine-readable scope registry. Captured verbatim from the docs;
+  the full enumerated scope list is not published publicly.
+schemes:
+  - name: OAuth2
+    flow: authorizationCode
+    authorizationUrl: https://oauth.employmenthero.com/oauth2/authorize
+    tokenUrl: https://oauth.employmenthero.com/oauth2/token
+scopes:
+  - scope: organisation:read
+    description: Read access to organisation-level data (documented as an example scope).
+    flows: [authorizationCode]
+    note: example scope named in the docs; exact scope string is developer-selected at app registration.
+  - scope: employee:read
+    description: Read access to employee data (documented as an example scope).
+    flows: [authorizationCode]
+    note: example scope named in the docs; exact scope string is developer-selected at app registration.
+scope_selection: >-
+  Scopes are chosen per application at registration and granted by the
+  organisation admin during consent. Employment Hero does not publish a full
+  enumerated scope reference, so only the documented example scopes are recorded
+  here (no fabrication of unlisted scopes).

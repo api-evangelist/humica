@@ -1,7 +1,17 @@
 aid: humica
 name: humi.ca
-description: humi.ca is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  humi.ca is the Canadian HR, payroll, benefits, and hiring platform originally
+  built as Humi and now operating as Employment Hero Canada (humi.ca redirects to
+  employmenthero.com/en-ca). The platform is an all-in-one Employment Operating
+  System covering HR management, payroll processing, applicant tracking (ATS),
+  employee experience, learning, and Employer-of-Record hiring across 180+
+  countries. Employment Hero exposes a public REST API at api.employmenthero.com,
+  secured with OAuth 2.0 authorization-code plus PKCE (mandatory from 2026-09-14),
+  with documented resources spanning employees, organisations, payroll, leave,
+  timesheets, rostering, documents, and webhooks, plus a partner integration
+  marketplace (Xero, QuickBooks, Slack, Google Workspace, Microsoft 365, Square,
+  Indeed, LinkedIn and more).
 url: https://raw.githubusercontent.com/api-evangelist/humica/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +19,117 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-note: humi.ca (Humi) acquired by / rebranded to Employment Hero; canonical developer surface is developer.employmenthero.com
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Human Resources
+- Payroll
+- HR Tech
+- Benefits
+- Applicant Tracking
+- Employer of Record
+- Canada
+- SaaS
+image: https://employmenthero.com/favicon.ico
+apis:
+- name: Employment Hero API
+  description: >-
+    REST API for the Employment Hero platform (behind humi.ca) — employees,
+    organisations, payroll, leave, timesheets, rostering, documents, and
+    webhooks. OAuth 2.0 authorization-code with PKCE; Bearer tokens (15-minute
+    lifetime).
+  humanURL: https://developer.employmenthero.com
+  baseURL: https://api.employmenthero.com
+  properties:
+  - type: APIReference
+    url: https://developer.employmenthero.com/api-references
+  - type: Authentication
+    url: authentication/humica-authentication.yml
+  - type: OAuthScopes
+    url: scopes/humica-scopes.yml
+  - type: Conventions
+    url: conventions/humica-conventions.yml
+  - type: DataModel
+    url: data-model/humica-data-model.yml
+  - type: MCPServer
+    url: mcp/humica-mcp.yml
+  - type: Webhooks
+    url: data-model/humica-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/humica-vulnerability-disclosure.yml
+- type: Security
+  url: https://employmenthero.com/.well-known/security.txt
+- type: DomainSecurity
+  url: security/humica-domain-security.yml
 - type: Website
-  url: https://humi.ca
+  url: https://employmenthero.com/en-ca/
+- type: DeveloperPortal
+  url: https://developer.employmenthero.com
+- type: Documentation
+  url: https://developer.employmenthero.com
+- type: APIReference
+  url: https://developer.employmenthero.com/api-references
+- type: Authentication
+  url: authentication/humica-authentication.yml
+- type: OAuthScopes
+  url: scopes/humica-scopes.yml
+- type: Conventions
+  url: conventions/humica-conventions.yml
+- type: Lifecycle
+  url: lifecycle/humica-lifecycle.yml
+- type: StatusPage
+  url: https://status.employmenthero.com
+- type: ChangeLog
+  url: changelog/humica-changelog.yml
+- type: Conformance
+  url: conformance/humica-conformance.yml
+- type: DataModel
+  url: data-model/humica-data-model.yml
+- type: MCPServer
+  url: mcp/humica-mcp.yml
+- type: Webhooks
+  url: data-model/humica-data-model.yml
+- type: WellKnown
+  url: well-known/humica-well-known.yml
+- type: SecurityTxt
+  url: well-known/humica-security.txt
+- type: LLMsTxt
+  url: llms/humica-llms.txt
+- type: Integrations
+  url: https://employmenthero.com/en-ca/integrations/
+- type: Support
+  url: https://help.employmenthero.info/hc/en-ca/
+- type: HelpCenter
+  url: https://support.humi.ca/hc/en-us
+- type: Blog
+  url: https://employmenthero.com/en-ca/news/
+- type: TermsOfService
+  url: https://employmenthero.com/en-ca/legals/terms-conditions/
+- type: PrivacyPolicy
+  url: https://employmenthero.com/en-ca/legals/privacy-policy/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.employmenthero.com/api-references
+description: >-
+  Cross-cutting request/response conventions for the Employment Hero API (the
+  platform behind humi.ca). Captured from the public developer docs. Fields not
+  documented publicly are left null rather than guessed — no idempotency-key
+  contract is documented, so no Idempotency pointer is emitted for this provider.
+base_url: https://api.employmenthero.com
+api_style: REST over HTTPS, JSON responses; OAuth token requests are application/x-www-form-urlencoded
+
+authentication:
+  scheme: OAuth 2.0 authorization-code with PKCE (S256), Bearer access token
+  access_token_lifetime: 15 minutes
+  docs: https://developer.employmenthero.com/api-references
+  detail: authentication/humica-authentication.yml
+
+idempotency:
+  supported: null
+  note: No idempotency-key header/contract is documented in the public API reference.
+
+pagination:
+  style: null
+  note: Pagination scheme is not explicitly documented in the public reference summary; not asserted.
+
+versioning:
+  scheme: host-based developer portal; OAuth PKCE becomes mandatory 2026-09-14
+  note: See lifecycle/humica-lifecycle.yml for the PKCE enforcement change.
+
+request_tracing:
+  request_id_header: null
+
+error_envelope:
+  format: null
+  note: Error envelope shape not published in the reference summary; see errors/ if later derived from a spec.
+
+rate_limit_signaling:
+  documented: null
+
+events:
+  webhooks: true
+  note: A Webhook resource is documented among the API resource groups. See lifecycle / apis.yml Webhooks pointer.
+
+related:
+  authentication: authentication/humica-authentication.yml
+  scopes: scopes/humica-scopes.yml
+  lifecycle: lifecycle/humica-lifecycle.yml

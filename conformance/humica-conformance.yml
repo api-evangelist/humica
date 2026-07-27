@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.employmenthero.com/api-references
+description: >-
+  Cross-cutting standards the Employment Hero API conforms to, asserted from the
+  public developer documentation. Only standards with real evidence are marked
+  conforms:true; unverified ones are recorded conforms:false rather than assumed.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      Authorization-code flow with authorize/token endpoints documented at
+      oauth.employmenthero.com; Bearer access tokens.
+  - id: oauth2-pkce
+    conforms: true
+    evidence: PKCE (code_challenge/code_verifier, S256) documented and mandatory from 2026-09-14.
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: /.well-known/security.txt present (200) on employmenthero.com with Contact + Policy.
+  - id: oidc
+    conforms: false
+    evidence: OpenID Connect discovery endpoints returned 403 (not publicly confirmed).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Error envelope not published; not asserted.

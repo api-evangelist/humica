@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.employmenthero.com/api-references
+description: >-
+  Recent dated changes published on the Employment Hero developer portal. Only
+  the publicly dated change is recorded; Employment Hero does not publish a full
+  machine-readable changelog feed, so this captures the recent window only.
+scheme: date-based announcements on the developer portal
+current_version: null
+entries:
+  - date: '2026-09-14'
+    type: breaking
+    highlights:
+      - OAuth 2.0 PKCE (code_challenge + code_verifier, S256) becomes mandatory for the authorization-code flow.
+    source: https://developer.employmenthero.com/api-references

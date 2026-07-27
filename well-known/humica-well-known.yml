@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for the hosts in
+  apis.yml. humi.ca (301) redirects to the Employment Hero platform
+  (employmenthero.com) — Humi was acquired by / rebranded to Employment Hero
+  Canada — so the discovery surface lives on employmenthero.com and its API /
+  OAuth hosts. Status is the HTTP code observed at fetch time; only documents
+  that returned a real payload were saved verbatim.
+hosts:
+  - host: https://employmenthero.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        type: text/plain
+        file: humica-security.txt
+      - path: /.well-known/openid-configuration
+        status: 404
+  - host: https://oauth.employmenthero.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+  - host: https://api.employmenthero.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404

@@ -1,0 +1,98 @@
+generated: '2026-07-19'
+method: derived
+source: https://developer.employmenthero.com/api-references
+description: >-
+  Entity graph for the Employment Hero API derived from the documented resource
+  groups (developer.employmenthero.com). Relationships are inferred from resource
+  naming (e.g. "Employee Benefit", "Leave Balance/Request", "Employee Custom
+  Field" imply belongs-to / has-many links to Employee and Organisation). No
+  OpenAPI spec is published, so field-level $ref links could not be confirmed;
+  relationships are marked as naming-derived.
+entities:
+  - name: Organisation
+    relationships:
+      - {kind: has_many, target: Employee}
+      - {kind: has_many, target: EmployingEntity}
+      - {kind: has_many, target: Department}
+      - {kind: has_many, target: Team}
+      - {kind: has_many, target: Policy}
+      - {kind: has_many, target: PayCategory}
+      - {kind: has_many, target: LeaveCategory}
+  - name: Employee
+    relationships:
+      - {kind: belongs_to, target: Organisation}
+      - {kind: has_many, target: EmployeeBenefit, via: Employee Benefit}
+      - {kind: has_many, target: LeaveRequest}
+      - {kind: has_many, target: LeaveBalance}
+      - {kind: has_many, target: Payslip}
+      - {kind: has_many, target: PayDetail}
+      - {kind: has_many, target: TimesheetEntry}
+      - {kind: has_many, target: EmploymentHistory}
+      - {kind: has_many, target: EmergencyContact}
+      - {kind: has_many, target: BankAccount}
+      - {kind: has_many, target: Certification, via: Employee Certification Detail}
+      - {kind: has_many, target: CustomField, via: Employee Custom Field}
+      - {kind: has_many, target: Document}
+      - {kind: belongs_to, target: Position}
+      - {kind: belongs_to, target: Department}
+      - {kind: belongs_to, target: Team}
+  - name: LeaveRequest
+    relationships:
+      - {kind: belongs_to, target: Employee}
+      - {kind: belongs_to, target: LeaveCategory}
+  - name: Payslip
+    relationships:
+      - {kind: belongs_to, target: Employee}
+  - name: TimesheetEntry
+    relationships:
+      - {kind: belongs_to, target: Employee}
+      - {kind: belongs_to, target: WorkType}
+  - name: RosteredShift
+    relationships:
+      - {kind: belongs_to, target: Employee}
+      - {kind: belongs_to, target: WorkLocation}
+  - name: Webhook
+    relationships:
+      - {kind: belongs_to, target: Organisation}
+documented_resources:
+  - Award & Classification
+  - Bank Account
+  - Benefit
+  - Certification
+  - Contractor Job History
+  - Cost Centre
+  - Custom Field
+  - Department
+  - Document
+  - Emergency Contact
+  - Employee
+  - Employee Benefit
+  - Employee Certification Detail
+  - Employee Custom Field
+  - Employing Entity
+  - Employment History
+  - Form
+  - Form Category
+  - Form Template
+  - Goal
+  - Kiosk Member
+  - Leave Balance
+  - Leave Category
+  - Leave Request
+  - Organisation
+  - Pay Category
+  - Pay Detail
+  - Payslip
+  - Policy
+  - Position
+  - Rostered Shift
+  - Superannuation Detail
+  - Tax Declaration
+  - Team
+  - Timesheet Entry
+  - Unavailability
+  - Work Eligibility
+  - Work Location
+  - Work Site
+  - Work Type
+  - Webhook

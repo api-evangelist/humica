@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.employmenthero.com
+description: >-
+  Operational lifecycle for the Employment Hero platform (behind humi.ca). A
+  public Atlassian Statuspage reports component/regional health. The one dated,
+  breaking API change currently published is the move to mandatory OAuth PKCE
+  (S256) effective 2026-09-14. No standalone formal deprecation-policy page was
+  found on the public developer portal.
+versioning:
+  scheme: developer-portal / host-based
+  docs: https://developer.employmenthero.com/api-references
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: >-
+    No RFC 8594 Sunset/Deprecation-header policy documented publicly. The nearest
+    dated breaking change is OAuth PKCE becoming mandatory on 2026-09-14.
+sla:
+  url: https://status.employmenthero.com
+  uptime_reported:
+    - {component: Employment Hero Website, uptime: "99.99%"}
+    - {component: HR Software, uptime: "98.59%"}
+status_page: https://status.employmenthero.com
+status_page_provider: Atlassian Statuspage
+breaking_changes:
+  - change: OAuth 2.0 PKCE (code_challenge/code_verifier, S256) becomes mandatory
+    effective: '2026-09-14'
+    source: https://developer.employmenthero.com/api-references
