@@ -55,6 +55,7 @@ tags:
 - Employer of Record
 - Canada
 - Software-as-a-Service
+- Employee Benefits
 tags_raw:
 - Company
 - Human Resources
@@ -65,6 +66,7 @@ tags_raw:
 - Employer of Record
 - Canada
 - SaaS
+- Employee Benefits
 image: https://employmenthero.com/favicon.ico
 apis:
 - name: Employment Hero API
