@@ -19,16 +19,17 @@
       "source": "https://employmenthero.com/en-ca/feed/",
       "feed_url": "https://employmenthero.com/en-ca/feed/",
       "title": "",
-      "saved": 3,
+      "saved": 0,
       "method": "feed"
     },
     {
-      "source": "https://support.humi.ca/hc/en-us",
-      "feed_url": "",
+      "source": "https://employmenthero.com/en-ca/blog/feed/",
+      "feed_url": "https://employmenthero.com/en-ca/blog/feed/",
+      "title": "",
       "saved": 0,
-      "skipped": "community-shaped; a vendor feed already saved this run (roadmap#239)"
+      "method": "feed"
     }
   ],
-  "post_count": 3,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 10,
+  "fetched": "2026-10-17T14:53:57Z"
 }
