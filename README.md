@@ -64,6 +64,105 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-humi.ca is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+humi.ca is the Canadian HR, payroll, benefits, and hiring platform originally built as Humi and now operating as Employment Hero Canada (humi.ca redirects to employmenthero.com/en-ca). The platform is an all-in-one Employment Operating System covering HR management, payroll processing, applicant tracking (ATS), employee experience, learning, and Employer-of-Record hiring across 180+ countries. Employment Hero exposes a public REST API at api.employmenthero.com, secured with OAuth 2.0 authorization-code plus PKCE (mandatory from 2026-09-14), with documented resources spanning employees, organisations, payroll, leave, timesheets, rostering, documents, and webhooks, plus a partner integration marketplace (Xero, QuickBooks, Slack, Google Workspace, Microsoft 365, Square, Indeed, LinkedIn and more).
 
-Backed by: 500-global — https://humi.ca
+**Areas:** Company · Human Resources · Payroll · Benefits · Applicant Tracking · Employer of Record · Canada · Software-as-a-Service · Employee Benefits
+
+## humi.ca on APIs.io
+
+Everything profiled for humi.ca is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/humica/](https://apis.io/providers/humica/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Employment Hero API](https://apis.io/apis/humica/employment-hero-api/) — REST API for the Employment Hero platform (behind humi.ca) — employees, organisations, payroll, leave, timesheets, rostering, documents, and webhooks. OAuth…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [employment-hero](https://apis.io/servers/humica/employment-hero/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Humica Authentication](https://apis.io/security/humica/humica-authentication/)
+- [Humica Domain Security](https://apis.io/security/humica/humica-domain-security/)
+- [Humica Vulnerability Disclosure](https://apis.io/security/humica/humica-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Humica Scopes](https://apis.io/scopes/humica/humica-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://employmenthero.com/en-ca/)
+- [Documentation](https://developer.employmenthero.com)
+- [API reference](https://developer.employmenthero.com/api-references)
+- [Support](https://help.employmenthero.info/hc/en-ca/)
+- [Blog](https://employmenthero.com/en-ca/blog/)
+- [Security](https://employmenthero.com/.well-known/security.txt)
+- [Terms of service](https://employmenthero.com/en-ca/legals/terms-conditions/)
+- [Privacy policy](https://employmenthero.com/en-ca/legals/privacy-policy/)
+- [Status](https://status.employmenthero.com)
+
+## API Evangelist rating
+
+**Kin Score 31.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 6.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 40.2** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/humica/](https://apis.io/providers/humica/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for humi.ca: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/humica/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
